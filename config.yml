@@ -15,7 +15,7 @@ collections:
   files:
   - name: projects
     label: المشاريع (أضف / عدّل / احذف)
-    file: content/projects.json
+    file: projects.json
     format: json
     fields:
     - name: items
@@ -62,7 +62,7 @@ collections:
         default: true
   - name: team
     label: الفريق (أضف / عدّل / احذف)
-    file: content/team.json
+    file: team.json
     format: json
     fields:
     - name: members
@@ -96,7 +96,7 @@ collections:
       - *id001
   - name: photos
     label: الصور (قسم التصوير)
-    file: content/photos.json
+    file: photos.json
     format: json
     fields:
     - name: photos
@@ -118,7 +118,7 @@ collections:
       - *id001
   - name: expertise
     label: مجالات الخبرة
-    file: content/expertise.json
+    file: expertise.json
     format: json
     fields:
     - name: items
@@ -145,7 +145,7 @@ collections:
         required: false
   - name: site
     label: نصوص الموقع وبقية الأقسام
-    file: content/site.json
+    file: site.json
     format: json
     fields:
     - name: hero
