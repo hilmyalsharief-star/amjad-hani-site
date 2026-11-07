@@ -1,8 +1,7 @@
 # إعدادات لوحة التحكم (Sveltia CMS)
-# غيّر سطر repo تحت لاسم حسابك ومستودعك على GitHub.
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+  repo: hilmyalsharief-star/amjad-hani-site
   branch: main
 media_folder: assets/uploads
 public_folder: assets/uploads
