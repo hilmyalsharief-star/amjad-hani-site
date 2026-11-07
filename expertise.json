@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "title_en": "Architecture",
+      "title_ar": "العمارة",
+      "text_en": "Architectural concepts, design development and thoughtful spaces.",
+      "text_ar": "الرؤى المعمارية وتطوير التصميم وصناعة المساحات المدروسة."
+    },
+    {
+      "title_en": "Planning",
+      "title_ar": "التخطيط",
+      "text_en": "Planning strategies shaped around context and community.",
+      "text_ar": "استراتيجيات تخطيط تنطلق من المكان والمجتمع."
+    },
+    {
+      "title_en": "Engineering",
+      "title_ar": "الهندسة",
+      "text_en": "Integrated thinking across technical and design disciplines.",
+      "text_ar": "تكامل الرؤية الفنية والهندسية مع التصميم."
+    },
+    {
+      "title_en": "Interiors",
+      "title_ar": "التصميم الداخلي",
+      "text_en": "Interior environments with a focus on material and experience.",
+      "text_ar": "مساحات داخلية تهتم بالخامات والتجربة الإنسانية."
+    }
+  ]
+}
