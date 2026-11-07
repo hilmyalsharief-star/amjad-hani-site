@@ -1,0 +1,146 @@
+{
+  "stats": [
+    {
+      "value": 50,
+      "suffix": "+",
+      "label_en": "Projects (sample)",
+      "label_ar": "مشروع (تجريبي)"
+    },
+    {
+      "value": 12,
+      "suffix": "",
+      "label_en": "Years of experience (sample)",
+      "label_ar": "سنة خبرة (تجريبي)"
+    },
+    {
+      "value": 30,
+      "suffix": "+",
+      "label_en": "Clients (sample)",
+      "label_ar": "عميل (تجريبي)"
+    },
+    {
+      "value": 5,
+      "suffix": "",
+      "label_en": "Awards (sample)",
+      "label_ar": "جوائز (تجريبي)"
+    }
+  ],
+  "process": [
+    {
+      "title_en": "Consultation",
+      "title_ar": "الاستشارة",
+      "text_en": "We listen to your needs, site and budget.",
+      "text_ar": "نستمع لاحتياجاتك وموقعك وميزانيتك.",
+      "visible": true
+    },
+    {
+      "title_en": "Design",
+      "title_ar": "التصميم",
+      "text_en": "Concept, development and detailed drawings.",
+      "text_ar": "الفكرة والتطوير والمخططات التفصيلية.",
+      "visible": true
+    },
+    {
+      "title_en": "Construction",
+      "title_ar": "التنفيذ",
+      "text_en": "Coordination and supervision on site.",
+      "text_ar": "التنسيق والإشراف في الموقع.",
+      "visible": true
+    },
+    {
+      "title_en": "Handover",
+      "title_ar": "التسليم",
+      "text_en": "Final inspection and a smooth handover.",
+      "text_ar": "فحص نهائي وتسليم سلس.",
+      "visible": true
+    }
+  ],
+  "testimonials": [
+    {
+      "quote_en": "“Sample testimonial. Replace this with a real quote from a client.”",
+      "quote_ar": "«رأي تجريبي. استبدله بكلام حقيقي من عميل.»",
+      "author_en": "Sample client",
+      "author_ar": "عميل تجريبي",
+      "role_en": "Villa owner",
+      "role_ar": "مالك فيلا",
+      "visible": true
+    },
+    {
+      "quote_en": "“Another sample quote about the working experience.”",
+      "quote_ar": "«اقتباس تجريبي آخر عن تجربة التعامل.»",
+      "author_en": "Sample client",
+      "author_ar": "عميل تجريبي",
+      "role_en": "Developer",
+      "role_ar": "مطوّر عقاري",
+      "visible": true
+    }
+  ],
+  "clients": [
+    {
+      "name": "Client 01",
+      "logo": "",
+      "visible": true
+    },
+    {
+      "name": "Client 02",
+      "logo": "",
+      "visible": true
+    },
+    {
+      "name": "Client 03",
+      "logo": "",
+      "visible": true
+    },
+    {
+      "name": "Client 04",
+      "logo": "",
+      "visible": true
+    },
+    {
+      "name": "Client 05",
+      "logo": "",
+      "visible": true
+    }
+  ],
+  "awards": [
+    {
+      "year": "2025",
+      "title_en": "Sample award title",
+      "title_ar": "عنوان جائزة تجريبية",
+      "org_en": "Awarding organisation",
+      "org_ar": "الجهة المانحة",
+      "visible": true
+    },
+    {
+      "year": "2024",
+      "title_en": "Sample membership",
+      "title_ar": "عضوية تجريبية",
+      "org_en": "Engineers association",
+      "org_ar": "نقابة المهندسين",
+      "visible": true
+    }
+  ],
+  "faq": [
+    {
+      "q_en": "How much does a design cost?",
+      "q_ar": "كم تكلفة التصميم؟",
+      "a_en": "Sample answer. Fees depend on scope and size. Contact us for a quote.",
+      "a_ar": "إجابة تجريبية. تعتمد الأتعاب على حجم المشروع ونطاقه. تواصل معنا للحصول على عرض سعر.",
+      "visible": true
+    },
+    {
+      "q_en": "How long does a project take?",
+      "q_ar": "كم تستغرق مدة المشروع؟",
+      "a_en": "Sample answer. Duration depends on the project type.",
+      "a_ar": "إجابة تجريبية. تختلف المدة حسب نوع المشروع.",
+      "visible": true
+    },
+    {
+      "q_en": "Do you supervise construction?",
+      "q_ar": "هل تقدمون الإشراف على التنفيذ؟",
+      "a_en": "Sample answer. Yes, we offer full supervision.",
+      "a_ar": "إجابة تجريبية. نعم، نقدم إشرافاً كاملاً.",
+      "visible": true
+    }
+  ]
+}

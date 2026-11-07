@@ -1,0 +1,15 @@
+{
+  "title_en": "From the site",
+  "title_ar": "من الموقع",
+  "date": "2026-08-15",
+  "summary_en": "Sample update from a construction site visit.",
+  "summary_ar": "تحديث تجريبي من زيارة موقع تنفيذ.",
+  "body_en": "This is a sample service page. Describe what this service includes, how you work and what the client receives.\n\nAdd a second paragraph about your process or typical deliverables.",
+  "body_ar": "هذه صفحة خدمة تجريبية. اشرح ما تتضمنه الخدمة وكيف تعملون وماذا يحصل عليه العميل.\n\nأضف فقرة ثانية عن طريقة العمل أو المخرجات المعتادة.",
+  "cover": {
+    "kind": "image",
+    "image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80"
+  },
+  "gallery": [],
+  "visible": true
+}

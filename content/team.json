@@ -1,0 +1,68 @@
+{
+  "group": {
+    "media": {
+      "kind": "image",
+      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80"
+    },
+    "caption_en": "The studio team (sample image — replace with your team photo)",
+    "caption_ar": "فريق المكتب (صورة تجريبية — استبدلها بصورة فريقكم)"
+  },
+  "members": [
+    {
+      "name_en": "Team Member 01",
+      "name_ar": "عضو الفريق 01",
+      "role_en": "Principal Architect",
+      "role_ar": "مهندس معماري رئيسي",
+      "photo": {},
+      "education_en": "B.Sc. Architecture, Sample University, 2010",
+      "education_ar": "بكالوريوس هندسة معمارية، جامعة تجريبية، 2010",
+      "bio_en": "Sample bio. Write a short paragraph about experience, focus and approach.",
+      "bio_ar": "نبذة تجريبية. اكتب فقرة قصيرة عن الخبرة والتخصص وأسلوب العمل.",
+      "linkedin": "",
+      "email": "",
+      "visible": true
+    },
+    {
+      "name_en": "Team Member 02",
+      "name_ar": "عضو الفريق 02",
+      "role_en": "Senior Designer",
+      "role_ar": "مصمم أول",
+      "photo": {},
+      "education_en": "M.Sc. Urban Design, Sample University, 2014",
+      "education_ar": "ماجستير تصميم عمراني، جامعة تجريبية، 2014",
+      "bio_en": "Sample bio.",
+      "bio_ar": "نبذة تجريبية.",
+      "linkedin": "",
+      "email": "",
+      "visible": true
+    },
+    {
+      "name_en": "Team Member 03",
+      "name_ar": "عضو الفريق 03",
+      "role_en": "Interior Designer",
+      "role_ar": "مصمم داخلي",
+      "photo": {},
+      "education_en": "B.A. Interior Design, Sample University, 2016",
+      "education_ar": "بكالوريوس تصميم داخلي، جامعة تجريبية، 2016",
+      "bio_en": "Sample bio.",
+      "bio_ar": "نبذة تجريبية.",
+      "linkedin": "",
+      "email": "",
+      "visible": true
+    },
+    {
+      "name_en": "Team Member 04",
+      "name_ar": "عضو الفريق 04",
+      "role_en": "Site Engineer",
+      "role_ar": "مهندس موقع",
+      "photo": {},
+      "education_en": "B.Sc. Civil Engineering, Sample University, 2018",
+      "education_ar": "بكالوريوس هندسة مدنية، جامعة تجريبية، 2018",
+      "bio_en": "Sample bio.",
+      "bio_ar": "نبذة تجريبية.",
+      "linkedin": "",
+      "email": "",
+      "visible": true
+    }
+  ]
+}

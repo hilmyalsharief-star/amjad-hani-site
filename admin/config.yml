@@ -1,0 +1,2231 @@
+backend:
+  name: github
+  repo: hilmyalsharief-star/amjad-hani-site
+  branch: main
+media_folder: assets/uploads
+public_folder: /assets/uploads
+locale: ar
+site_url: https://hilmyalsharief-star.github.io/amjad-hani-site/
+collections:
+- name: projects
+  label: المشاريع
+  label_singular: مشروع
+  folder: content/projects
+  extension: json
+  format: json
+  create: true
+  identifier_field: title_en
+  slug: '{{slug}}'
+  summary: '{{title_ar}}'
+  fields:
+  - name: title_en
+    label: اسم المشروع English
+    widget: string
+    required: false
+  - name: title_ar
+    label: اسم المشروع عربي
+    widget: string
+    required: false
+  - name: categories
+    label: الأقسام
+    widget: relation
+    collection: settings
+    file: categories
+    search_fields:
+    - items.*.name_ar
+    value_field: items.*.id
+    display_fields:
+    - items.*.name_ar
+    multiple: true
+    required: false
+  - name: status
+    label: الحالة
+    widget: select
+    options:
+    - label: منجز
+      value: completed
+    - label: قيد التنفيذ
+      value: in_progress
+    - label: مرحلة الفكرة
+      value: concept
+    default: completed
+  - name: year
+    label: السنة
+    widget: string
+    required: false
+  - name: area
+    label: المساحة
+    widget: string
+    required: false
+  - name: location_en
+    label: الموقع English
+    widget: string
+    required: false
+  - name: location_ar
+    label: الموقع عربي
+    widget: string
+    required: false
+  - name: map_url
+    label: رابط الخريطة (قوقل)
+    widget: string
+    required: false
+  - name: show_map
+    label: عرض الخريطة داخل الصفحة
+    widget: boolean
+    default: false
+  - name: map_query
+    label: عنوان للبحث في الخريطة المدمجة
+    widget: string
+    required: false
+  - name: client_en
+    label: العميل English
+    widget: string
+    required: false
+  - name: client_ar
+    label: العميل عربي
+    widget: string
+    required: false
+  - name: cover
+    label: الغلاف
+    widget: object
+    fields:
+    - name: kind
+      label: النوع
+      widget: select
+      options:
+      - label: صورة
+        value: image
+      - label: فيديو مرفوع
+        value: video
+      - label: فيديو من رابط (يوتيوب / فيميو)
+        value: link
+      default: image
+    - name: image
+      label: الصورة (أو صورة غلاف للفيديو)
+      widget: image
+      required: false
+    - name: video
+      label: ملف الفيديو (mp4)
+      widget: file
+      hint: يفضّل أقل من 25 ميغا
+      required: false
+    - name: link
+      label: رابط يوتيوب أو فيميو
+      widget: string
+      required: false
+    collapsed: false
+  - name: summary_en
+    label: ملخص English
+    widget: text
+    required: false
+  - name: summary_ar
+    label: ملخص عربي
+    widget: text
+    required: false
+  - name: description_en
+    label: الوصف English
+    widget: text
+    required: false
+  - name: description_ar
+    label: الوصف عربي
+    widget: text
+    required: false
+  - name: gallery
+    label: المعرض (صور وفيديوهات)
+    widget: list
+    fields:
+    - name: media
+      label: الوسائط (صورة أو فيديو)
+      widget: object
+      fields:
+      - name: kind
+        label: النوع
+        widget: select
+        options:
+        - label: صورة
+          value: image
+        - label: فيديو مرفوع
+          value: video
+        - label: فيديو من رابط (يوتيوب / فيميو)
+          value: link
+        default: image
+      - name: image
+        label: الصورة (أو صورة غلاف للفيديو)
+        widget: image
+        required: false
+      - name: video
+        label: ملف الفيديو (mp4)
+        widget: file
+        hint: يفضّل أقل من 25 ميغا
+        required: false
+      - name: link
+        label: رابط يوتيوب أو فيميو
+        widget: string
+        required: false
+      collapsed: false
+    - name: caption_en
+      label: تعليق English
+      widget: string
+      required: false
+    - name: caption_ar
+      label: تعليق عربي
+      widget: string
+      required: false
+    summary: '{{fields.caption_ar}}'
+    required: false
+  - name: stages
+    label: مراحل المشروع
+    widget: list
+    fields:
+    - name: title_en
+      label: English
+      widget: string
+      required: false
+    - name: title_ar
+      label: عربي
+      widget: string
+      required: false
+    - name: text_en
+      label: نص English
+      widget: text
+      required: false
+    - name: text_ar
+      label: نص عربي
+      widget: text
+      required: false
+    - name: visible
+      label: ظاهر
+      widget: boolean
+      default: true
+    summary: '{{fields.title_ar}}'
+    required: false
+  - name: before_after
+    label: قبل / بعد
+    widget: list
+    fields:
+    - name: before
+      label: قبل
+      widget: image
+      required: false
+    - name: after
+      label: بعد
+      widget: image
+      required: false
+    - name: caption_en
+      label: تعليق English
+      widget: string
+      required: false
+    - name: caption_ar
+      label: تعليق عربي
+      widget: string
+      required: false
+    required: false
+  - name: testimonial
+    label: رأي العميل
+    widget: object
+    fields:
+    - name: quote_en
+      label: الرأي English
+      widget: text
+      required: false
+    - name: quote_ar
+      label: الرأي عربي
+      widget: text
+      required: false
+    - name: author_en
+      label: الاسم English
+      widget: string
+      required: false
+    - name: author_ar
+      label: الاسم عربي
+      widget: string
+      required: false
+    - name: role_en
+      label: الصفة English
+      widget: string
+      required: false
+    - name: role_ar
+      label: الصفة عربي
+      widget: string
+      required: false
+    collapsed: true
+  - name: drawings
+    label: المخططات (صور / PDF / CAD)
+    widget: list
+    fields:
+    - name: title_en
+      label: العنوان English
+      widget: string
+      required: false
+    - name: title_ar
+      label: العنوان عربي
+      widget: string
+      required: false
+    - name: file
+      label: الملف
+      widget: file
+      required: false
+    summary: '{{fields.title_ar}}'
+    required: false
+  - name: extra
+    label: أقسام إضافية حرة
+    widget: list
+    fields:
+    - name: title_en
+      label: العنوان English
+      widget: string
+      required: false
+    - name: title_ar
+      label: العنوان عربي
+      widget: string
+      required: false
+    - name: text_en
+      label: النص English
+      widget: text
+      required: false
+    - name: text_ar
+      label: النص عربي
+      widget: text
+      required: false
+    - name: media
+      label: وسائط
+      widget: list
+      fields:
+      - name: media
+        label: الوسائط (صورة أو فيديو)
+        widget: object
+        fields:
+        - name: kind
+          label: النوع
+          widget: select
+          options:
+          - label: صورة
+            value: image
+          - label: فيديو مرفوع
+            value: video
+          - label: فيديو من رابط (يوتيوب / فيميو)
+            value: link
+          default: image
+        - name: image
+          label: الصورة (أو صورة غلاف للفيديو)
+          widget: image
+          required: false
+        - name: video
+          label: ملف الفيديو (mp4)
+          widget: file
+          hint: يفضّل أقل من 25 ميغا
+          required: false
+        - name: link
+          label: رابط يوتيوب أو فيميو
+          widget: string
+          required: false
+        collapsed: false
+      required: false
+    - name: files
+      label: ملفات للتحميل
+      widget: list
+      fields:
+      - name: file
+        label: الملف
+        widget: file
+        required: false
+      - name: label_en
+        label: تسمية English
+        widget: string
+        required: false
+      - name: label_ar
+        label: تسمية عربي
+        widget: string
+        required: false
+      required: false
+    - name: visible
+      label: ظاهر
+      widget: boolean
+      default: true
+    summary: '{{fields.title_ar}}'
+    required: false
+  - name: featured
+    label: مميّز (يظهر في الرئيسية)
+    widget: boolean
+    default: false
+  - name: order
+    label: الترتيب
+    widget: number
+    value_type: int
+    default: 10
+    required: false
+  - name: visible
+    label: ظاهر
+    widget: boolean
+    default: true
+  - name: seo_title
+    label: عنوان SEO (اختياري)
+    widget: string
+    required: false
+  - name: seo_description
+    label: وصف SEO (اختياري)
+    widget: text
+    required: false
+- name: settings
+  label: إعدادات الصفحات
+  files:
+  - name: site
+    label: النصوص والغلاف والأقسام
+    file: content/site.json
+    format: json
+    fields:
+    - name: seo
+      label: محركات البحث والمشاركة (SEO)
+      widget: object
+      fields:
+      - name: title
+        label: عنوان الموقع
+        widget: string
+        required: false
+      - name: description
+        label: وصف الموقع
+        widget: text
+        required: false
+      - name: url
+        label: رابط الموقع الكامل
+        widget: string
+        hint: 'مثال: https://hilmyalsharief-star.github.io/amjad-hani-site'
+        required: false
+      - name: og_image
+        label: صورة المشاركة (رابط أو ارفع صورة)
+        widget: string
+        required: false
+      - name: default_lang
+        label: اللغة الافتراضية
+        widget: select
+        options:
+        - label: English
+          value: en
+        - label: العربية
+          value: ar
+        default: en
+      collapsed: true
+    - name: brand
+      label: الهوية
+      widget: object
+      fields:
+      - name: name_ar
+        label: اسم المكتب بالعربي
+        widget: string
+        required: false
+      - name: tagline_ar
+        label: السطر التعريفي بالعربي
+        widget: string
+        required: false
+      collapsed: true
+    - name: nav_items
+      label: قائمة الشريط العلوي
+      widget: list
+      fields:
+      - name: label_en
+        label: الاسم English
+        widget: string
+        required: false
+      - name: label_ar
+        label: الاسم عربي
+        widget: string
+        required: false
+      - name: target
+        label: الوجهة
+        widget: string
+        hint: 'مثل #projects أو #contact'
+        required: false
+      - name: visible
+        label: ظاهر
+        widget: boolean
+        default: true
+      collapsed: true
+      required: false
+    - name: header_cta
+      label: زر "ابدأ مشروعك" في الأعلى
+      widget: object
+      fields:
+      - name: text_en
+        label: النص English
+        widget: string
+        required: false
+      - name: text_ar
+        label: النص عربي
+        widget: string
+        required: false
+      - name: target
+        label: الوجهة
+        widget: string
+        required: false
+      - name: visible
+        label: ظاهر
+        widget: boolean
+        default: true
+      collapsed: true
+    - name: sections
+      label: ترتيب وإظهار أقسام الصفحة الرئيسية
+      widget: list
+      fields:
+      - name: id
+        label: القسم
+        widget: select
+        options:
+        - label: الغلاف
+          value: hero
+        - label: المقدمة
+          value: intro
+        - label: الأرقام
+          value: stats
+        - label: الفريق
+          value: team
+        - label: التصوير
+          value: photography
+        - label: المشاريع
+          value: projects
+        - label: عن المكتب
+          value: about
+        - label: الخدمات
+          value: expertise
+        - label: مشروع مميز
+          value: featured
+        - label: مراحل العمل
+          value: process
+        - label: آراء العملاء
+          value: testimonials
+        - label: العملاء والجوائز
+          value: partners
+        - label: الأخبار
+          value: news
+        - label: أسئلة شائعة
+          value: faq
+        - label: التوظيف
+          value: careers
+        - label: التواصل
+          value: contact
+        default: hero
+      - name: visible
+        label: ظاهر
+        widget: boolean
+        default: true
+      summary: '{{fields.id}}'
+      hint: اسحب لإعادة الترتيب
+      required: false
+    - name: hero
+      label: الغلاف (سلايدر الصور والفيديو)
+      widget: object
+      fields:
+      - name: interval
+        label: مدة كل شريحة بالثواني
+        widget: number
+        value_type: int
+        default: 6
+        min: 2
+        max: 30
+        required: false
+      - name: scroll
+        label: نص "مرّر للأسفل"
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: play_note
+        label: ملاحظة صغيرة (اتركها فاضية لإخفائها)
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: slides
+        label: الشرائح
+        widget: list
+        fields:
+        - name: media
+          label: الوسائط (صورة أو فيديو)
+          widget: object
+          fields:
+          - name: kind
+            label: النوع
+            widget: select
+            options:
+            - label: صورة
+              value: image
+            - label: فيديو مرفوع
+              value: video
+            - label: فيديو من رابط (يوتيوب / فيميو)
+              value: link
+            default: image
+          - name: image
+            label: الصورة (أو صورة غلاف للفيديو)
+            widget: image
+            required: false
+          - name: video
+            label: ملف الفيديو (mp4)
+            widget: file
+            hint: يفضّل أقل من 25 ميغا
+            required: false
+          - name: link
+            label: رابط يوتيوب أو فيميو
+            widget: string
+            required: false
+          collapsed: false
+        - name: eyebrow_en
+          label: سطر صغير English
+          widget: string
+          required: false
+        - name: eyebrow_ar
+          label: سطر صغير عربي
+          widget: string
+          required: false
+        - name: title_en
+          label: العنوان English
+          widget: string
+          required: false
+        - name: title_ar
+          label: العنوان عربي
+          widget: string
+          required: false
+        - name: subtitle_en
+          label: النص English
+          widget: string
+          required: false
+        - name: subtitle_ar
+          label: النص عربي
+          widget: string
+          required: false
+        - name: button_en
+          label: نص الزر English
+          widget: string
+          required: false
+        - name: button_ar
+          label: نص الزر عربي
+          widget: string
+          required: false
+        - name: button_link
+          label: رابط الزر
+          widget: string
+          required: false
+        - name: visible
+          label: ظاهر
+          widget: boolean
+          default: true
+        collapsed: true
+        required: false
+      collapsed: false
+    - name: intro
+      label: المقدمة
+      widget: object
+      fields:
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: text
+        label: النص
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: link_text
+        label: نص الرابط
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: team
+      label: قسم الفريق
+      widget: object
+      fields:
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: text
+        label: النص
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: empty_note
+        label: ملاحظة عند عدم وجود أعضاء
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: photography
+      label: قسم التصوير
+      widget: object
+      fields:
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: text
+        label: النص
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: note
+        label: ملاحظة صغيرة
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: projects
+      label: قسم المشاريع
+      widget: object
+      fields:
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: link_text
+        label: نص الرابط
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: note
+        label: ملاحظة صغيرة
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: about
+      label: عن المكتب
+      widget: object
+      fields:
+      - name: media
+        label: الوسائط (صورة أو فيديو)
+        widget: object
+        fields:
+        - name: kind
+          label: النوع
+          widget: select
+          options:
+          - label: صورة
+            value: image
+          - label: فيديو مرفوع
+            value: video
+          - label: فيديو من رابط (يوتيوب / فيميو)
+            value: link
+          default: image
+        - name: image
+          label: الصورة (أو صورة غلاف للفيديو)
+          widget: image
+          required: false
+        - name: video
+          label: ملف الفيديو (mp4)
+          widget: file
+          hint: يفضّل أقل من 25 ميغا
+          required: false
+        - name: link
+          label: رابط يوتيوب أو فيميو
+          widget: string
+          required: false
+        collapsed: false
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: text
+        label: النص
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: link_text
+        label: نص الرابط
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: expertise
+      label: الخدمات
+      widget: object
+      fields:
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: note
+        label: ملاحظة صغيرة
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: featured
+      label: مشروع مميز (بانر)
+      widget: object
+      fields:
+      - name: media
+        label: الوسائط (صورة أو فيديو)
+        widget: object
+        fields:
+        - name: kind
+          label: النوع
+          widget: select
+          options:
+          - label: صورة
+            value: image
+          - label: فيديو مرفوع
+            value: video
+          - label: فيديو من رابط (يوتيوب / فيميو)
+            value: link
+          default: image
+        - name: image
+          label: الصورة (أو صورة غلاف للفيديو)
+          widget: image
+          required: false
+        - name: video
+          label: ملف الفيديو (mp4)
+          widget: file
+          hint: يفضّل أقل من 25 ميغا
+          required: false
+        - name: link
+          label: رابط يوتيوب أو فيميو
+          widget: string
+          required: false
+        collapsed: false
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: label
+        label: سطر تعريفي
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: text
+        label: النص
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: process
+      label: مراحل العمل
+      widget: object
+      fields:
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: testimonials
+      label: آراء العملاء
+      widget: object
+      fields:
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: partners
+      label: العملاء والجوائز
+      widget: object
+      fields:
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: news
+      label: الأخبار
+      widget: object
+      fields:
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: link_text
+        label: نص الرابط
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: count
+        label: عدد الأخبار في الرئيسية
+        widget: number
+        value_type: int
+        default: 3
+        required: false
+      collapsed: true
+    - name: faq
+      label: الأسئلة الشائعة
+      widget: object
+      fields:
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: careers
+      label: التوظيف
+      widget: object
+      fields:
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: text
+        label: النص
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: link_text
+        label: نص الزر
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: apply_link
+        label: رابط التقديم
+        widget: string
+        hint: 'بريد mailto: أو رابط نموذج'
+        required: false
+      - name: note
+        label: ملاحظة
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: contact
+      label: قسم التواصل
+      widget: object
+      fields:
+      - name: kicker
+        label: العنوان الصغير
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: text
+        label: النص
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: text
+          required: false
+        - name: ar
+          label: العربية
+          widget: text
+          required: false
+        collapsed: true
+      - name: note
+        label: ملاحظة صغيرة
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: footer
+      label: الفوتر
+      widget: object
+      fields:
+      - name: brand
+        label: اسم المكتب
+        widget: string
+        required: false
+      - name: copyright
+        label: اسم حقوق النشر
+        widget: string
+        required: false
+      - name: tagline
+        label: السطر التعريفي
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      collapsed: true
+    - name: privacy
+      label: صفحة الخصوصية
+      widget: object
+      fields:
+      - name: title
+        label: العنوان
+        widget: object
+        fields:
+        - name: en
+          label: English
+          widget: string
+          required: false
+        - name: ar
+          label: العربية
+          widget: string
+          required: false
+        collapsed: true
+      - name: body_en
+        label: النص English
+        widget: text
+        required: false
+      - name: body_ar
+        label: النص عربي
+        widget: text
+        required: false
+      - name: visible
+        label: ظاهرة
+        widget: boolean
+        default: true
+      collapsed: true
+    - name: analytics
+      label: الإحصائيات (Umami)
+      widget: object
+      fields:
+      - name: umami_website_id
+        label: Website ID من Umami
+        widget: string
+        hint: اتركه فاضي لتعطيل الإحصائيات
+        required: false
+      collapsed: true
+  - name: categories
+    label: أقسام المشاريع
+    file: content/categories.json
+    format: json
+    fields:
+    - name: items
+      label: الأقسام
+      widget: list
+      fields:
+      - name: id
+        label: المعرّف (إنجليزي بدون مسافات)
+        widget: string
+        hint: 'مثال: interior'
+        required: false
+      - name: name_en
+        label: الاسم English
+        widget: string
+        required: false
+      - name: name_ar
+        label: الاسم عربي
+        widget: string
+        required: false
+      - name: media
+        label: الوسائط (صورة أو فيديو)
+        widget: object
+        fields:
+        - name: kind
+          label: النوع
+          widget: select
+          options:
+          - label: صورة
+            value: image
+          - label: فيديو مرفوع
+            value: video
+          - label: فيديو من رابط (يوتيوب / فيميو)
+            value: link
+          default: image
+        - name: image
+          label: الصورة (أو صورة غلاف للفيديو)
+          widget: image
+          required: false
+        - name: video
+          label: ملف الفيديو (mp4)
+          widget: file
+          hint: يفضّل أقل من 25 ميغا
+          required: false
+        - name: link
+          label: رابط يوتيوب أو فيميو
+          widget: string
+          required: false
+        collapsed: false
+      - name: visible
+        label: ظاهر
+        widget: boolean
+        default: true
+      summary: '{{fields.name_ar}}'
+      required: false
+  - name: team
+    label: الفريق
+    file: content/team.json
+    format: json
+    fields:
+    - name: group
+      label: الصورة أو الفيديو الجماعي
+      widget: object
+      fields:
+      - name: media
+        label: الوسائط (صورة أو فيديو)
+        widget: object
+        fields:
+        - name: kind
+          label: النوع
+          widget: select
+          options:
+          - label: صورة
+            value: image
+          - label: فيديو مرفوع
+            value: video
+          - label: فيديو من رابط (يوتيوب / فيميو)
+            value: link
+          default: image
+        - name: image
+          label: الصورة (أو صورة غلاف للفيديو)
+          widget: image
+          required: false
+        - name: video
+          label: ملف الفيديو (mp4)
+          widget: file
+          hint: يفضّل أقل من 25 ميغا
+          required: false
+        - name: link
+          label: رابط يوتيوب أو فيميو
+          widget: string
+          required: false
+        collapsed: false
+      - name: caption_en
+        label: تعليق English
+        widget: string
+        required: false
+      - name: caption_ar
+        label: تعليق عربي
+        widget: string
+        required: false
+      collapsed: false
+    - name: members
+      label: أعضاء الفريق
+      widget: list
+      fields:
+      - name: name_en
+        label: الاسم English
+        widget: string
+        required: false
+      - name: name_ar
+        label: الاسم عربي
+        widget: string
+        required: false
+      - name: role_en
+        label: المنصب English
+        widget: string
+        required: false
+      - name: role_ar
+        label: المنصب عربي
+        widget: string
+        required: false
+      - name: photo
+        label: الصورة
+        widget: object
+        fields:
+        - name: kind
+          label: النوع
+          widget: select
+          options:
+          - label: صورة
+            value: image
+          - label: فيديو مرفوع
+            value: video
+          - label: فيديو من رابط (يوتيوب / فيميو)
+            value: link
+          default: image
+        - name: image
+          label: الصورة (أو صورة غلاف للفيديو)
+          widget: image
+          required: false
+        - name: video
+          label: ملف الفيديو (mp4)
+          widget: file
+          hint: يفضّل أقل من 25 ميغا
+          required: false
+        - name: link
+          label: رابط يوتيوب أو فيميو
+          widget: string
+          required: false
+        collapsed: false
+      - name: education_en
+        label: التعليم English
+        widget: string
+        required: false
+      - name: education_ar
+        label: التعليم عربي
+        widget: string
+        required: false
+      - name: bio_en
+        label: النبذة English
+        widget: text
+        required: false
+      - name: bio_ar
+        label: النبذة عربي
+        widget: text
+        required: false
+      - name: linkedin
+        label: رابط لينكدإن
+        widget: string
+        required: false
+      - name: email
+        label: البريد
+        widget: string
+        required: false
+      - name: visible
+        label: ظاهر
+        widget: boolean
+        default: true
+      summary: '{{fields.name_ar}}'
+      required: false
+  - name: photos
+    label: التصوير
+    file: content/photos.json
+    format: json
+    fields:
+    - name: photos
+      label: الصور والفيديوهات
+      widget: list
+      fields:
+      - name: media
+        label: الوسائط (صورة أو فيديو)
+        widget: object
+        fields:
+        - name: kind
+          label: النوع
+          widget: select
+          options:
+          - label: صورة
+            value: image
+          - label: فيديو مرفوع
+            value: video
+          - label: فيديو من رابط (يوتيوب / فيميو)
+            value: link
+          default: image
+        - name: image
+          label: الصورة (أو صورة غلاف للفيديو)
+          widget: image
+          required: false
+        - name: video
+          label: ملف الفيديو (mp4)
+          widget: file
+          hint: يفضّل أقل من 25 ميغا
+          required: false
+        - name: link
+          label: رابط يوتيوب أو فيميو
+          widget: string
+          required: false
+        collapsed: false
+      - name: alt
+        label: وصف
+        widget: string
+        required: false
+      - name: visible
+        label: ظاهر
+        widget: boolean
+        default: true
+      summary: '{{fields.alt}}'
+      required: false
+  - name: credibility
+    label: الأرقام والآراء والأسئلة
+    file: content/credibility.json
+    format: json
+    fields:
+    - name: stats
+      label: الأرقام
+      widget: list
+      fields:
+      - name: value
+        label: الرقم
+        widget: number
+        value_type: int
+        required: false
+      - name: suffix
+        label: لاحقة (+)
+        widget: string
+        required: false
+      - name: label_en
+        label: العنوان English
+        widget: string
+        required: false
+      - name: label_ar
+        label: العنوان عربي
+        widget: string
+        required: false
+      summary: '{{fields.label_ar}}'
+      required: false
+    - name: process
+      label: مراحل العمل
+      widget: list
+      fields:
+      - name: title_en
+        label: العنوان English
+        widget: string
+        required: false
+      - name: title_ar
+        label: العنوان عربي
+        widget: string
+        required: false
+      - name: text_en
+        label: النص English
+        widget: text
+        required: false
+      - name: text_ar
+        label: النص عربي
+        widget: text
+        required: false
+      - name: visible
+        label: ظاهر
+        widget: boolean
+        default: true
+      summary: '{{fields.title_ar}}'
+      required: false
+    - name: testimonials
+      label: آراء العملاء
+      widget: list
+      fields:
+      - name: quote_en
+        label: الرأي English
+        widget: text
+        required: false
+      - name: quote_ar
+        label: الرأي عربي
+        widget: text
+        required: false
+      - name: author_en
+        label: الاسم English
+        widget: string
+        required: false
+      - name: author_ar
+        label: الاسم عربي
+        widget: string
+        required: false
+      - name: role_en
+        label: الصفة English
+        widget: string
+        required: false
+      - name: role_ar
+        label: الصفة عربي
+        widget: string
+        required: false
+      - name: visible
+        label: ظاهر
+        widget: boolean
+        default: true
+      summary: '{{fields.author_ar}}'
+      required: false
+    - name: clients
+      label: العملاء (شعارات)
+      widget: list
+      fields:
+      - name: name
+        label: الاسم
+        widget: string
+        required: false
+      - name: logo
+        label: الشعار
+        widget: image
+        required: false
+      - name: visible
+        label: ظاهر
+        widget: boolean
+        default: true
+      summary: '{{fields.name}}'
+      required: false
+    - name: awards
+      label: الجوائز والعضويات
+      widget: list
+      fields:
+      - name: year
+        label: السنة
+        widget: string
+        required: false
+      - name: title_en
+        label: العنوان English
+        widget: string
+        required: false
+      - name: title_ar
+        label: العنوان عربي
+        widget: string
+        required: false
+      - name: org_en
+        label: الجهة English
+        widget: string
+        required: false
+      - name: org_ar
+        label: الجهة عربي
+        widget: string
+        required: false
+      - name: visible
+        label: ظاهر
+        widget: boolean
+        default: true
+      summary: '{{fields.title_ar}}'
+      required: false
+    - name: faq
+      label: الأسئلة الشائعة
+      widget: list
+      fields:
+      - name: q_en
+        label: السؤال English
+        widget: string
+        required: false
+      - name: q_ar
+        label: السؤال عربي
+        widget: string
+        required: false
+      - name: a_en
+        label: الجواب English
+        widget: text
+        required: false
+      - name: a_ar
+        label: الجواب عربي
+        widget: text
+        required: false
+      - name: visible
+        label: ظاهر
+        widget: boolean
+        default: true
+      summary: '{{fields.q_ar}}'
+      required: false
+  - name: contact
+    label: التواصل والنموذج
+    file: content/contact.json
+    format: json
+    fields:
+    - name: channels
+      label: قنوات التواصل
+      widget: list
+      fields:
+      - name: platform
+        label: المنصة
+        widget: select
+        options:
+        - label: واتساب
+          value: whatsapp
+        - label: هاتف
+          value: phone
+        - label: بريد
+          value: email
+        - label: فيسبوك
+          value: facebook
+        - label: انستغرام
+          value: instagram
+        - label: لينكدإن
+          value: linkedin
+        - label: يوتيوب
+          value: youtube
+        - label: تيك توك
+          value: tiktok
+        - label: X
+          value: x
+        - label: سناب شات
+          value: snapchat
+        - label: تيليجرام
+          value: telegram
+        - label: الخريطة
+          value: map
+        - label: أخرى
+          value: custom
+        default: whatsapp
+      - name: value
+        label: الرقم أو الرابط
+        widget: string
+        hint: 'واتساب: الرقم مع كود الدولة بدون + (مثال 962791234567). الباقي: الرابط الكامل'
+        required: false
+      - name: label_en
+        label: تسمية English (اختياري)
+        widget: string
+        required: false
+      - name: label_ar
+        label: تسمية عربي (اختياري)
+        widget: string
+        required: false
+      - name: floating
+        label: زر عائم (واتساب فقط يفضّل)
+        widget: boolean
+        default: false
+      - name: footer
+        label: يظهر في الفوتر
+        widget: boolean
+        default: true
+      - name: contact
+        label: يظهر في قسم التواصل
+        widget: boolean
+        default: true
+      - name: visible
+        label: ظاهر
+        widget: boolean
+        default: true
+      summary: '{{fields.platform}} — {{fields.value}}'
+      required: false
+    - name: address_en
+      label: العنوان English
+      widget: string
+      required: false
+    - name: address_ar
+      label: العنوان عربي
+      widget: string
+      required: false
+    - name: map_url
+      label: رابط الخريطة
+      widget: string
+      required: false
+    - name: hours_en
+      label: ساعات العمل English
+      widget: string
+      required: false
+    - name: hours_ar
+      label: ساعات العمل عربي
+      widget: string
+      required: false
+    - name: form
+      label: نموذج "ابدأ مشروعك"
+      widget: object
+      fields:
+      - name: web3forms_key
+        label: مفتاح Web3Forms
+        widget: string
+        hint: من web3forms.com — يحدد البريد الذي تصله الطلبات
+        required: false
+      - name: subject
+        label: عنوان الرسالة
+        widget: string
+        required: false
+      - name: title_en
+        label: عنوان النموذج English
+        widget: string
+        required: false
+      - name: title_ar
+        label: عنوان النموذج عربي
+        widget: string
+        required: false
+      - name: intro_en
+        label: مقدمة English
+        widget: text
+        required: false
+      - name: intro_ar
+        label: مقدمة عربي
+        widget: text
+        required: false
+      - name: button_en
+        label: نص الزر English
+        widget: string
+        required: false
+      - name: button_ar
+        label: نص الزر عربي
+        widget: string
+        required: false
+      - name: success_en
+        label: رسالة النجاح English
+        widget: string
+        required: false
+      - name: success_ar
+        label: رسالة النجاح عربي
+        widget: string
+        required: false
+      - name: error_en
+        label: رسالة الخطأ English
+        widget: string
+        required: false
+      - name: error_ar
+        label: رسالة الخطأ عربي
+        widget: string
+        required: false
+      - name: consent_en
+        label: نص الموافقة English
+        widget: string
+        required: false
+      - name: consent_ar
+        label: نص الموافقة عربي
+        widget: string
+        required: false
+      - name: budgets
+        label: خيارات الميزانية
+        widget: list
+        fields:
+        - name: label_en
+          label: English
+          widget: string
+          required: false
+        - name: label_ar
+          label: عربي
+          widget: string
+          required: false
+        required: false
+      collapsed: true
+- name: services
+  label: الخدمات
+  label_singular: خدمة
+  folder: content/services
+  extension: json
+  format: json
+  create: true
+  identifier_field: title_en
+  summary: '{{title_ar}}'
+  fields:
+  - name: title_en
+    label: العنوان English
+    widget: string
+    required: false
+  - name: title_ar
+    label: العنوان عربي
+    widget: string
+    required: false
+  - name: summary_en
+    label: ملخص English
+    widget: text
+    required: false
+  - name: summary_ar
+    label: ملخص عربي
+    widget: text
+    required: false
+  - name: body_en
+    label: النص English
+    widget: text
+    required: false
+  - name: body_ar
+    label: النص عربي
+    widget: text
+    required: false
+  - name: cover
+    label: الغلاف
+    widget: object
+    fields:
+    - name: kind
+      label: النوع
+      widget: select
+      options:
+      - label: صورة
+        value: image
+      - label: فيديو مرفوع
+        value: video
+      - label: فيديو من رابط (يوتيوب / فيميو)
+        value: link
+      default: image
+    - name: image
+      label: الصورة (أو صورة غلاف للفيديو)
+      widget: image
+      required: false
+    - name: video
+      label: ملف الفيديو (mp4)
+      widget: file
+      hint: يفضّل أقل من 25 ميغا
+      required: false
+    - name: link
+      label: رابط يوتيوب أو فيميو
+      widget: string
+      required: false
+    collapsed: false
+  - name: gallery
+    label: معرض
+    widget: list
+    fields:
+    - name: media
+      label: الوسائط (صورة أو فيديو)
+      widget: object
+      fields:
+      - name: kind
+        label: النوع
+        widget: select
+        options:
+        - label: صورة
+          value: image
+        - label: فيديو مرفوع
+          value: video
+        - label: فيديو من رابط (يوتيوب / فيميو)
+          value: link
+        default: image
+      - name: image
+        label: الصورة (أو صورة غلاف للفيديو)
+        widget: image
+        required: false
+      - name: video
+        label: ملف الفيديو (mp4)
+        widget: file
+        hint: يفضّل أقل من 25 ميغا
+        required: false
+      - name: link
+        label: رابط يوتيوب أو فيميو
+        widget: string
+        required: false
+      collapsed: false
+    - name: caption_en
+      label: تعليق English
+      widget: string
+      required: false
+    - name: caption_ar
+      label: تعليق عربي
+      widget: string
+      required: false
+    required: false
+  - name: order
+    label: الترتيب
+    widget: number
+    value_type: int
+    default: 10
+    required: false
+  - name: visible
+    label: ظاهر
+    widget: boolean
+    default: true
+- name: news
+  label: الأخبار
+  label_singular: خبر
+  folder: content/news
+  extension: json
+  format: json
+  create: true
+  identifier_field: title_en
+  summary: '{{title_ar}}'
+  fields:
+  - name: title_en
+    label: العنوان English
+    widget: string
+    required: false
+  - name: title_ar
+    label: العنوان عربي
+    widget: string
+    required: false
+  - name: date
+    label: التاريخ
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    picker_utc: true
+  - name: summary_en
+    label: ملخص English
+    widget: text
+    required: false
+  - name: summary_ar
+    label: ملخص عربي
+    widget: text
+    required: false
+  - name: body_en
+    label: النص English
+    widget: text
+    required: false
+  - name: body_ar
+    label: النص عربي
+    widget: text
+    required: false
+  - name: cover
+    label: الغلاف
+    widget: object
+    fields:
+    - name: kind
+      label: النوع
+      widget: select
+      options:
+      - label: صورة
+        value: image
+      - label: فيديو مرفوع
+        value: video
+      - label: فيديو من رابط (يوتيوب / فيميو)
+        value: link
+      default: image
+    - name: image
+      label: الصورة (أو صورة غلاف للفيديو)
+      widget: image
+      required: false
+    - name: video
+      label: ملف الفيديو (mp4)
+      widget: file
+      hint: يفضّل أقل من 25 ميغا
+      required: false
+    - name: link
+      label: رابط يوتيوب أو فيميو
+      widget: string
+      required: false
+    collapsed: false
+  - name: gallery
+    label: معرض
+    widget: list
+    fields:
+    - name: media
+      label: الوسائط (صورة أو فيديو)
+      widget: object
+      fields:
+      - name: kind
+        label: النوع
+        widget: select
+        options:
+        - label: صورة
+          value: image
+        - label: فيديو مرفوع
+          value: video
+        - label: فيديو من رابط (يوتيوب / فيميو)
+          value: link
+        default: image
+      - name: image
+        label: الصورة (أو صورة غلاف للفيديو)
+        widget: image
+        required: false
+      - name: video
+        label: ملف الفيديو (mp4)
+        widget: file
+        hint: يفضّل أقل من 25 ميغا
+        required: false
+      - name: link
+        label: رابط يوتيوب أو فيميو
+        widget: string
+        required: false
+      collapsed: false
+    - name: caption_en
+      label: تعليق English
+      widget: string
+      required: false
+    - name: caption_ar
+      label: تعليق عربي
+      widget: string
+      required: false
+    required: false
+  - name: visible
+    label: ظاهر
+    widget: boolean
+    default: true

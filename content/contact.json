@@ -1,0 +1,113 @@
+{
+  "channels": [
+    {
+      "platform": "whatsapp",
+      "label_en": "",
+      "label_ar": "",
+      "value": "962700000000",
+      "floating": true,
+      "footer": false,
+      "contact": true,
+      "visible": true
+    },
+    {
+      "platform": "phone",
+      "label_en": "Office phone",
+      "label_ar": "هاتف المكتب",
+      "value": "+962 7 0000 0000",
+      "floating": false,
+      "footer": false,
+      "contact": true,
+      "visible": true
+    },
+    {
+      "platform": "email",
+      "label_en": "",
+      "label_ar": "",
+      "value": "info@example.com",
+      "floating": false,
+      "footer": true,
+      "contact": true,
+      "visible": true
+    },
+    {
+      "platform": "instagram",
+      "label_en": "",
+      "label_ar": "",
+      "value": "https://instagram.com/",
+      "floating": false,
+      "footer": true,
+      "contact": false,
+      "visible": true
+    },
+    {
+      "platform": "facebook",
+      "label_en": "",
+      "label_ar": "",
+      "value": "https://facebook.com/",
+      "floating": false,
+      "footer": true,
+      "contact": false,
+      "visible": true
+    },
+    {
+      "platform": "linkedin",
+      "label_en": "",
+      "label_ar": "",
+      "value": "https://linkedin.com/",
+      "floating": false,
+      "footer": true,
+      "contact": false,
+      "visible": true
+    },
+    {
+      "platform": "youtube",
+      "label_en": "",
+      "label_ar": "",
+      "value": "https://youtube.com/",
+      "floating": false,
+      "footer": true,
+      "contact": false,
+      "visible": true
+    }
+  ],
+  "address_en": "Sample street, Sample City",
+  "address_ar": "شارع تجريبي، مدينة تجريبية",
+  "map_url": "https://maps.google.com/",
+  "hours_en": "Sun – Thu, 9:00 – 17:00",
+  "hours_ar": "الأحد – الخميس، 9:00 – 17:00",
+  "form": {
+    "web3forms_key": "",
+    "subject": "New project request — website",
+    "title_en": "Start your project with us",
+    "title_ar": "ابدأ مشروعك معنا",
+    "intro_en": "Tell us a little about your project and we will get back to you.",
+    "intro_ar": "أخبرنا قليلاً عن مشروعك وسنعاود الاتصال بك.",
+    "button_en": "Send request",
+    "button_ar": "إرسال الطلب",
+    "success_en": "Thank you! We received your request and will contact you soon.",
+    "success_ar": "شكراً لك! وصلنا طلبك وسنتواصل معك قريباً.",
+    "error_en": "Something went wrong. Please try again or contact us directly.",
+    "error_ar": "حدث خطأ. حاول مرة أخرى أو تواصل معنا مباشرة.",
+    "consent_en": "I agree to the processing of my data to contact me about my request.",
+    "consent_ar": "أوافق على استخدام بياناتي للتواصل معي بخصوص طلبي.",
+    "budgets": [
+      {
+        "label_en": "Under 50,000",
+        "label_ar": "أقل من 50,000"
+      },
+      {
+        "label_en": "50,000 – 150,000",
+        "label_ar": "50,000 – 150,000"
+      },
+      {
+        "label_en": "150,000 – 500,000",
+        "label_ar": "150,000 – 500,000"
+      },
+      {
+        "label_en": "Above 500,000",
+        "label_ar": "أكثر من 500,000"
+      }
+    ]
+  }
+}

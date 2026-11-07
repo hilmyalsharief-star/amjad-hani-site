@@ -1,0 +1,452 @@
+{
+  "seo": {
+    "title": "Amjad Hani — Architects & Planners",
+    "description": "Amjad Hani Architects & Planners — architecture, planning and design.",
+    "url": "https://hilmyalsharief-star.github.io/amjad-hani-site",
+    "og_image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
+    "default_lang": "en"
+  },
+  "brand": {
+    "name_ar": "أمجد هاني",
+    "tagline_ar": "للهندسة المعمارية والتخطيط"
+  },
+  "nav_items": [
+    {
+      "label_en": "Home",
+      "label_ar": "الرئيسية",
+      "target": "#home",
+      "visible": true
+    },
+    {
+      "label_en": "Team",
+      "label_ar": "الفريق",
+      "target": "#team",
+      "visible": true
+    },
+    {
+      "label_en": "About",
+      "label_ar": "عن المكتب",
+      "target": "#about",
+      "visible": true
+    },
+    {
+      "label_en": "Photography",
+      "label_ar": "التصوير",
+      "target": "#photography",
+      "visible": true
+    },
+    {
+      "label_en": "Job Applicants",
+      "label_ar": "طلب التوظيف",
+      "target": "#careers",
+      "visible": true
+    },
+    {
+      "label_en": "Projects",
+      "label_ar": "المشاريع",
+      "target": "#projects",
+      "visible": true
+    },
+    {
+      "label_en": "Contact",
+      "label_ar": "تواصل معنا",
+      "target": "#contact",
+      "visible": true
+    }
+  ],
+  "header_cta": {
+    "text_en": "Start a project",
+    "text_ar": "ابدأ مشروعك",
+    "target": "#start",
+    "visible": true
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "visible": true
+    },
+    {
+      "id": "intro",
+      "visible": true
+    },
+    {
+      "id": "stats",
+      "visible": true
+    },
+    {
+      "id": "team",
+      "visible": true
+    },
+    {
+      "id": "photography",
+      "visible": true
+    },
+    {
+      "id": "projects",
+      "visible": true
+    },
+    {
+      "id": "about",
+      "visible": true
+    },
+    {
+      "id": "expertise",
+      "visible": true
+    },
+    {
+      "id": "featured",
+      "visible": true
+    },
+    {
+      "id": "process",
+      "visible": true
+    },
+    {
+      "id": "testimonials",
+      "visible": true
+    },
+    {
+      "id": "partners",
+      "visible": true
+    },
+    {
+      "id": "news",
+      "visible": true
+    },
+    {
+      "id": "faq",
+      "visible": true
+    },
+    {
+      "id": "careers",
+      "visible": true
+    },
+    {
+      "id": "contact",
+      "visible": true
+    }
+  ],
+  "hero": {
+    "interval": 6,
+    "scroll": {
+      "en": "Scroll to explore",
+      "ar": "مرّر لاستكشاف الموقع"
+    },
+    "play_note": {
+      "en": "",
+      "ar": ""
+    },
+    "slides": [
+      {
+        "media": {
+          "kind": "video",
+          "video": "assets/samples/video-plan.mp4"
+        },
+        "eyebrow_en": "Architecture · Planning · Design",
+        "eyebrow_ar": "العمارة · التخطيط · التصميم",
+        "title_en": "Spaces shaped by vision.",
+        "title_ar": "مساحات تُصاغ برؤية.",
+        "subtitle_en": "A considered approach to architecture, place and the way we live.",
+        "subtitle_ar": "رؤية متكاملة للعمارة والمكان وتفاصيل الحياة.",
+        "button_en": "View projects",
+        "button_ar": "شاهد المشاريع",
+        "button_link": "#projects",
+        "visible": true
+      },
+      {
+        "media": {
+          "kind": "image",
+          "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2400&q=80"
+        },
+        "eyebrow_en": "Residential",
+        "eyebrow_ar": "سكني",
+        "title_en": "Homes that belong to their place.",
+        "title_ar": "بيوت تنتمي إلى مكانها.",
+        "subtitle_en": "",
+        "subtitle_ar": "",
+        "button_en": "",
+        "button_ar": "",
+        "button_link": "",
+        "visible": true
+      },
+      {
+        "media": {
+          "kind": "video",
+          "video": "assets/samples/video-massing.mp4"
+        },
+        "eyebrow_en": "Planning",
+        "eyebrow_ar": "التخطيط",
+        "title_en": "From the master plan to the detail.",
+        "title_ar": "من المخطط العام إلى التفصيلة.",
+        "subtitle_en": "",
+        "subtitle_ar": "",
+        "button_en": "",
+        "button_ar": "",
+        "button_link": "",
+        "visible": true
+      },
+      {
+        "media": {
+          "kind": "image",
+          "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=2400&q=80"
+        },
+        "eyebrow_en": "Interiors",
+        "eyebrow_ar": "تصميم داخلي",
+        "title_en": "Light, material, experience.",
+        "title_ar": "ضوء وخامة وتجربة.",
+        "subtitle_en": "",
+        "subtitle_ar": "",
+        "button_en": "",
+        "button_ar": "",
+        "button_link": "",
+        "visible": true
+      }
+    ]
+  },
+  "intro": {
+    "kicker": {
+      "en": "01 / The Studio",
+      "ar": "01 / المكتب"
+    },
+    "title": {
+      "en": "Designing spaces.\nCreating experiences.",
+      "ar": "نصمم المساحات،\nونصنع التجارب."
+    },
+    "text": {
+      "en": "Amjad Hani Architects & Planners is presented through a contemporary architectural lens — where clarity, context and considered design shape every space.",
+      "ar": "يقدّم مكتب أمجد هاني للعمارة والتخطيط رؤية معاصرة، تتكامل فيها البساطة وفهم المكان والتصميم المدروس لتشكيل مساحات ذات معنى."
+    },
+    "link_text": {
+      "en": "Discover the studio",
+      "ar": "اكتشف المكتب"
+    }
+  },
+  "team": {
+    "kicker": {
+      "en": "02 / The people",
+      "ar": "02 / فريق العمل"
+    },
+    "title": {
+      "en": "People behind the vision.",
+      "ar": "الأشخاص خلف الرؤية."
+    },
+    "text": {
+      "en": "A multidisciplinary team bringing ideas, experience and perspective together. Select a person to read more.",
+      "ar": "فريق متعدد التخصصات يجمع الأفكار والخبرات ووجهات النظر. اضغط على أي شخص لمعرفة المزيد."
+    },
+    "empty_note": {
+      "en": "TEAM PROFILES · TO BE ADDED",
+      "ar": "أعضاء الفريق · ستُضاف لاحقاً"
+    }
+  },
+  "photography": {
+    "kicker": {
+      "en": "03 / Visual stories",
+      "ar": "03 / حكايات بصرية"
+    },
+    "title": {
+      "en": "Photography.",
+      "ar": "التصوير."
+    },
+    "text": {
+      "en": "A visual collection of spaces, materials, light and architectural details.",
+      "ar": "مجموعة بصرية من المساحات والخامات والضوء والتفاصيل المعمارية."
+    },
+    "note": {
+      "en": "SAMPLE IMAGERY · REPLACE WITH OFFICIAL PHOTOGRAPHY",
+      "ar": "صور تجريبية · تُستبدل بالصور الرسمية"
+    }
+  },
+  "projects": {
+    "kicker": {
+      "en": "02 / Selected work",
+      "ar": "02 / أعمال مختارة"
+    },
+    "title": {
+      "en": "Selected projects.",
+      "ar": "مشاريع مختارة."
+    },
+    "link_text": {
+      "en": "Explore all projects",
+      "ar": "استكشف جميع المشاريع"
+    },
+    "note": {
+      "en": "Concept imagery for layout preview only. Final project photography and verified project information will replace these samples.",
+      "ar": "الصور المعروضة تجريبية لتوضيح التصميم فقط، وسيتم استبدالها بصور ومعلومات المشاريع الفعلية بعد اعتمادها."
+    }
+  },
+  "about": {
+    "media": {
+      "kind": "image",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1700&q=80"
+    },
+    "kicker": {
+      "en": "03 / About the studio",
+      "ar": "03 / عن المكتب"
+    },
+    "title": {
+      "en": "A vision beyond architecture.",
+      "ar": "رؤية تتجاوز حدود العمارة."
+    },
+    "text": {
+      "en": "We believe meaningful architecture begins with listening — to people, place and possibility. Our process brings thoughtful planning and design together to create enduring spaces.",
+      "ar": "نؤمن أن العمارة ذات المعنى تبدأ بالإنصات للإنسان والمكان والإمكانات. نجمع بين التخطيط الواعي والتصميم المدروس لنصنع مساحات تدوم."
+    },
+    "link_text": {
+      "en": "More about us",
+      "ar": "المزيد عن المكتب"
+    }
+  },
+  "expertise": {
+    "kicker": {
+      "en": "04 / What we do",
+      "ar": "04 / ماذا نقدم"
+    },
+    "title": {
+      "en": "Our expertise.",
+      "ar": "مجالات خبرتنا."
+    },
+    "note": {
+      "en": "Service categories are proposed placeholders and must be confirmed by the studio.",
+      "ar": "التخصصات المعروضة مقترحة وتحتاج إلى تأكيد المكتب قبل اعتمادها."
+    }
+  },
+  "featured": {
+    "media": {
+      "kind": "image",
+      "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2200&q=80"
+    },
+    "kicker": {
+      "en": "05 / In focus",
+      "ar": "05 / تحت الضوء"
+    },
+    "label": {
+      "en": "A closer look at considered design",
+      "ar": "نظرة أقرب إلى التصميم المدروس"
+    },
+    "title": {
+      "en": "Architecture in detail.",
+      "ar": "العمارة في تفاصيلها."
+    },
+    "text": {
+      "en": "Featured project · To be selected",
+      "ar": "مشروع مميز · سيتم اختياره"
+    }
+  },
+  "process": {
+    "kicker": {
+      "en": "06 / How we work",
+      "ar": "06 / أسلوب العمل"
+    },
+    "title": {
+      "en": "A clear process.",
+      "ar": "مسار عمل واضح."
+    }
+  },
+  "testimonials": {
+    "kicker": {
+      "en": "07 / Client words",
+      "ar": "07 / آراء العملاء"
+    },
+    "title": {
+      "en": "What clients say.",
+      "ar": "ماذا يقول عملاؤنا."
+    }
+  },
+  "partners": {
+    "kicker": {
+      "en": "08 / Trust",
+      "ar": "08 / الثقة"
+    },
+    "title": {
+      "en": "Clients & recognition.",
+      "ar": "العملاء والتقدير."
+    }
+  },
+  "news": {
+    "kicker": {
+      "en": "09 / Journal",
+      "ar": "09 / المستجدات"
+    },
+    "title": {
+      "en": "News & notes.",
+      "ar": "أخبار وملاحظات."
+    },
+    "link_text": {
+      "en": "All news",
+      "ar": "كل الأخبار"
+    },
+    "count": 3
+  },
+  "faq": {
+    "kicker": {
+      "en": "10 / Questions",
+      "ar": "10 / أسئلة"
+    },
+    "title": {
+      "en": "Frequently asked.",
+      "ar": "أسئلة شائعة."
+    }
+  },
+  "careers": {
+    "kicker": {
+      "en": "11 / Careers",
+      "ar": "11 / فرص العمل"
+    },
+    "title": {
+      "en": "Build what comes next.",
+      "ar": "ساهم في صناعة القادم."
+    },
+    "text": {
+      "en": "Interested in joining Amjad Hani Architects & Planners? We welcome applications from talented people who care about architecture, planning and thoughtful design.",
+      "ar": "هل ترغب بالانضمام إلى Amjad Hani Architects & Planners؟ نرحب بطلبات أصحاب المواهب والشغف بالعمارة والتخطيط والتصميم المدروس."
+    },
+    "link_text": {
+      "en": "Submit your interest",
+      "ar": "أرسل طلب اهتمامك"
+    },
+    "apply_link": "",
+    "note": {
+      "en": "",
+      "ar": ""
+    }
+  },
+  "contact": {
+    "kicker": {
+      "en": "12 / Get in touch",
+      "ar": "12 / تواصل معنا"
+    },
+    "title": {
+      "en": "Let's create something meaningful.",
+      "ar": "لنصنع شيئاً يحمل قيمة ومعنى."
+    },
+    "text": {
+      "en": "Have a project in mind? We would be glad to hear from you.",
+      "ar": "هل لديك مشروع في ذهنك؟ يسعدنا التواصل معك."
+    },
+    "note": {
+      "en": "Official contact details to be added",
+      "ar": "ستُضاف بيانات التواصل الرسمية لاحقاً"
+    }
+  },
+  "footer": {
+    "brand": "AMJAD HANI · ARCHITECTS & PLANNERS",
+    "copyright": "AMJAD HANI",
+    "tagline": {
+      "en": "Architecture · Planning · Design",
+      "ar": "العمارة · التخطيط · التصميم"
+    }
+  },
+  "privacy": {
+    "title": {
+      "en": "Privacy",
+      "ar": "الخصوصية"
+    },
+    "visible": true,
+    "body_en": "This site does not use advertising cookies. If you send a project request through the form, the details you enter (name, phone, email and project information) are used only to contact you about your request.\n\nTo ask us to delete your data, contact us using the details on this website.",
+    "body_ar": "لا يستخدم هذا الموقع ملفات تعريف الارتباط الإعلانية. عند إرسال طلب مشروع عبر النموذج، تُستخدم البيانات التي تدخلها (الاسم والهاتف والبريد ومعلومات المشروع) فقط للتواصل معك بخصوص طلبك.\n\nلطلب حذف بياناتك تواصل معنا عبر بيانات التواصل في هذا الموقع."
+  },
+  "analytics": {
+    "umami_website_id": ""
+  }
+}

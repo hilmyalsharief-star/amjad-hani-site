@@ -1,0 +1,46 @@
+{
+  "title_en": "River District Masterplan",
+  "title_ar": "المخطط العام لحي النهر",
+  "categories": [
+    "urban"
+  ],
+  "status": "concept",
+  "year": "2026",
+  "area": "18 ha",
+  "location_en": "Sample City",
+  "location_ar": "مدينة تجريبية",
+  "map_url": "https://maps.google.com/",
+  "show_map": false,
+  "map_query": "",
+  "client_en": "Private client (sample)",
+  "client_ar": "عميل خاص (تجريبي)",
+  "summary_en": "A walkable mixed-use district along the river edge.",
+  "summary_ar": "حي متعدد الاستخدامات يسهل المشي فيه على ضفة النهر.",
+  "description_en": "This is a sample description. Replace it with the real story of the project: the brief, the site, the design idea and how the building responds to light, climate and the way people use it.\n\nAdd a second paragraph for materials, structure or construction details. A blank line starts a new paragraph.",
+  "description_ar": "هذا وصف تجريبي. استبدله بقصة المشروع الحقيقية: فكرة العميل، والموقع، وفكرة التصميم، وكيف يتعامل المبنى مع الضوء والمناخ وطريقة استخدام الناس له.\n\nأضف فقرة ثانية للخامات أو الإنشاء أو تفاصيل التنفيذ. السطر الفارغ يبدأ فقرة جديدة.",
+  "cover": {
+    "kind": "video",
+    "video": "assets/samples/video-massing.mp4"
+  },
+  "gallery": [
+    {
+      "media": {
+        "kind": "image",
+        "image": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1500&q=80"
+      },
+      "caption_en": "",
+      "caption_ar": ""
+    },
+    {
+      "media": {
+        "kind": "image",
+        "image": "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1500&q=80"
+      },
+      "caption_en": "",
+      "caption_ar": ""
+    }
+  ],
+  "featured": false,
+  "order": 4,
+  "visible": true
+}

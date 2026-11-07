@@ -1,0 +1,15 @@
+{
+  "title_en": "Design notes: designing with light",
+  "title_ar": "ملاحظات تصميمية: التصميم بالضوء",
+  "date": "2026-09-08",
+  "summary_en": "Sample article. Write short design notes that help future clients understand your approach.",
+  "summary_ar": "مقال تجريبي. اكتب ملاحظات تصميمية قصيرة تساعد العملاء على فهم أسلوبكم.",
+  "body_en": "This is a sample service page. Describe what this service includes, how you work and what the client receives.\n\nAdd a second paragraph about your process or typical deliverables.",
+  "body_ar": "هذه صفحة خدمة تجريبية. اشرح ما تتضمنه الخدمة وكيف تعملون وماذا يحصل عليه العميل.\n\nأضف فقرة ثانية عن طريقة العمل أو المخرجات المعتادة.",
+  "cover": {
+    "kind": "image",
+    "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80"
+  },
+  "gallery": [],
+  "visible": true
+}
