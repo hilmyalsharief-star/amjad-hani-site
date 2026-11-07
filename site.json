@@ -1,40 +1,6 @@
 {
-  "seo": {
-    "title": "Amjad Hani — Architects & Planners",
-    "description": "Amjad Hani Architects & Planners — Architecture, planning and design."
-  },
-  "nav": {
-    "home": {
-      "en": "Home",
-      "ar": "الرئيسية"
-    },
-    "team": {
-      "en": "Team",
-      "ar": "الفريق"
-    },
-    "about": {
-      "en": "About",
-      "ar": "عن المكتب"
-    },
-    "photography": {
-      "en": "Photography",
-      "ar": "التصوير"
-    },
-    "careers": {
-      "en": "Job Applicants",
-      "ar": "طلب التوظيف"
-    },
-    "projects": {
-      "en": "Projects",
-      "ar": "المشاريع"
-    },
-    "contact": {
-      "en": "Contact",
-      "ar": "تواصل معنا"
-    }
-  },
   "hero": {
-    "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2400&q=88",
+    "image": "",
     "eyebrow": {
       "en": "Architecture · Planning · Design",
       "ar": "العمارة · التخطيط · التصميم"
@@ -238,5 +204,39 @@
     "facebook": "",
     "instagram": "",
     "linkedin": ""
+  },
+  "nav": {
+    "home": {
+      "en": "Home",
+      "ar": "الرئيسية"
+    },
+    "team": {
+      "en": "Team",
+      "ar": "الفريق"
+    },
+    "about": {
+      "en": "About",
+      "ar": "عن المكتب"
+    },
+    "photography": {
+      "en": "Photography",
+      "ar": "التصوير"
+    },
+    "careers": {
+      "en": "Job Applicants",
+      "ar": "طلب التوظيف"
+    },
+    "projects": {
+      "en": "Projects",
+      "ar": "المشاريع"
+    },
+    "contact": {
+      "en": "Contact",
+      "ar": "تواصل معنا"
+    }
+  },
+  "seo": {
+    "title": "Amjad Hani — Architects & Planners",
+    "description": "Amjad Hani Architects & Planners — Architecture, planning and design."
   }
 }
